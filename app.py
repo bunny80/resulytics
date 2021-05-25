@@ -22,7 +22,7 @@ def predict():
 
     output = round(prediction[0], 2)
 
-    return render_template('sign.html', prediction_text='Employee Salary should be $ {}'.format(output))
+    return render_template('sign.html', prediction_text='Price of land is approximately $ {}'.format(output))
 
     """
     CRIM=int(request.form['CRIM'])
