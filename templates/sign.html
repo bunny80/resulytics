@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+    body{
+    margin:0;
+    padding:0;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+h1{
+    font-size: 60px;
+    margin:0;
+    color: #00458b;
+}
+#menubar{
+    width:100%;
+    height:150px;
+    background-color: #ebedf0;
+}
+#signup{
+    width:100%;
+    height:600px;
+    background-color:#ebedf0;
+    float:right;
+}
+#line1{
+    width:50%;
+    height: 80px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#line2{
+    width:50%;
+    height:80px;
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+#line3{
+    width:50%;
+    height:80px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#line4{
+    width:50%;
+    height:80px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#line5{
+    width:50%;
+    height:80px;
+    display:flex;
+    justify-content: space-evenly;
+}
+#line6{
+    width:50%;
+    height:80px;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+input{
+    width:200px;
+    border:2px solid #eeeeee;
+    padding:12px 25px;
+    border-left: 5px solid #00458b;;
+
+}
+label{
+    font-family:sans-serif;
+    color:rgb(24, 26, 27);
+    font-size: 20px;
+}
+:placeholder-shown{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    color:#00458b;
+}
+button{
+    padding: 10px 40px;
+    margin:10px 0px;
+    font-family: sans-serif;
+    color:#0d3c6b;
+    position: relative;
+    left:80px;
+    font-size: 25px;
+    font-style: italic;
+}
+button:hover{
+    background-color: hsl(0, 8%, 7%);
+    color:#ebedf0;
+}
+#heading{
+    position: relative;
+    left:20px;
+    top:20px;
+    font-family: monospace;
+    font-style:oblique;
+    
+}
+#img{
+    float:right;
+    position: absolute;
+    left:900px;
+    bottom: 200px;
+}
+</style>
+          
+</head>
+<body>
+     <div id="innercontainer">
+            <div id ="menubar">
+                <div id ="heading">
+                 <h1>Land Price Prediction</h1>
+                 </div>
+            </div>
+            <div id ="signup">
+                <form action="{{ url_for('predict')}}"method="post">
+                    <div id="line1">
+                        <div id="sline">
+                                <label for="CRIM"> CRIM</label><br>
+                                <input type="number" name="CRIM" id="CRIM" placeholder="Enter CRIM" required="required"><br><br>
+                                </div>
+                                <div id="sline1">
+                                <label for="ZN"> ZN</label><br>
+                                <input type="number" name="ZN" id="ZN" placeholder="Enter ZN" required="required"><br><br>
+                                </div>  
+                                </div> 
+                                <div id="line2">
+                                    <div id ="sline2">
+                                    <label for="INDUS"> INDUS</label><br>
+                                    <input type="number" name="INDUS" id="INDUS" placeholder="Enter INDUS" required="required"><br><br>
+                                    </div>
+                                    <div id="sline3">
+                                      <label for="CHAS"> CHAS</label><br>
+                                    <input type="number" name="CHAS" id="CHAS" placeholder="Enter CHAS " required="required "><br><br>
+                                    </div>
+                                    </div>
+                                    <div id="line3">
+                                        <div>
+                                        <label for="NOX"> NOX</label><br>
+                                        <input type="number" name="NOX" id="NOX" placeholder="Enter NOX " required="required "><br><br>
+                                        </div>
+                                        <div> 
+                                         <label for="RM"> RM</label><br>
+                                        <input type="number" name="RM" id="RM" placeholder="Enter RM " required="required "><br><br> 
+                                        </div>
+                                       </div>
+                                        <div id="line4">
+                                            <div>
+                                            <label for="AGE">AGE</label><br>
+                                         <input type="number" name="AGE" id="AGE" placeholder="Enter AGE " required="required "><br><br>
+                                         </div>
+                                         <div>
+                                          <label for="DIS"> DIS</label><br>
+                                         <input type="number" name="DIS" id="DIS" placeholder="Enter DIS " required="required "><br><br> 
+                                         </div>
+                                         </div>
+                                         <div id="line5">
+                                             <div>
+                                            <label for="TAX"> TAX</label><br>
+                                         <input type="number" name="TAX" id="TAX" placeholder="Enter TAX " required="required ">
+                                             </div>
+                                             <div>
+                                          <label for="PTRATIO"> PTRATIO</label><br>
+                                         <input type="number" name="PTRATIO" id="PTRATIO" placeholder="Enter PTRATIO " required="required "><br><br> 
+                                         </div> 
+                                         </div>
+                                         <div id="line6">
+                                             <div>
+                                            <label for="B"> B</label><br>
+                                         <input type="number" name="B" id="B" placeholder="Enter B " required="required "><br><br>
+                                         </div>
+                                         <div>
+                                          <label for="LSTAT"> LSTAT</label><br>
+                                         <input type="number" name="LSTAT" id="LSTAT" placeholder="Enter LSTAT " required="required "><br><br>
+                                         </div>
+                                         </div><br>
+                                         <div id="button">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+                            </div>   
+<div id="img">
+                    <img src="/static/content/logo.png" width="400px" height="400px" ;>
+                </div> 
+                </form>
+                
+                {{prediction_text}}
+                
+              
+            </div>
+        </div>
+    
+</body>
+</html>
