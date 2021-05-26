@@ -17,14 +17,14 @@ h1{
     margin:0;
     color: #00458b;
 }
-#menubar{
+#menubar{ 
     width:100%;
     height:150px;
     background-color: #ebedf0;
 }
 #signup{
     width:100%;
-    height:600px;
+    height:720px;
     background-color:#ebedf0;
     float:right;
 }
@@ -85,7 +85,7 @@ label{
 }
 button{
     padding: 10px 40px;
-    margin:10px 0px;
+    margin-top: 30px;
     font-family: sans-serif;
     color:#0d3c6b;
     position: relative;
@@ -97,6 +97,12 @@ button:hover{
     background-color: hsl(0, 8%, 7%);
     color:#ebedf0;
 }
+
+/*.button1{
+    right: 50%;
+    margin-top: 30px;
+
+}*/
 #heading{
     position: relative;
     left:20px;
@@ -183,14 +189,29 @@ button:hover{
                                          <input type="number" name="LSTAT" id="LSTAT" placeholder="Enter LSTAT " required="required "><br><br>
                                          </div>
                                          </div><br>
-                                         <div id="button">
-                <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-                            </div>   
-<div id="img">
+
+
+                
+                <div id="button">
+                <button type="submit">Reference<a target="_blank" href="referance.txt"></a></button>
+                &emsp13; &emsp13; &emsp13; &emsp13; 
+                <button type="submit" >Predict</button>
+                </div>
+
+               <!-- <div id="button">
+                <button type="submit" style="left: 25%; margin-top: -25%;">Predict</button>
+                </div> -->  
+
+                <div id="img">
                     <img src="/static/content/logo.png" width="400px" height="400px" ;>
                 </div> 
-                </form>
-                
+            </form>
+                <br><br><br><br>
+               &emsp13;&emsp13;&emsp13;&emsp14;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+               &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+               &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+               &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
+               &emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;&emsp13;
                 {{prediction_text}}
                 
               
